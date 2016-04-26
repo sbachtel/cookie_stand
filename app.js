@@ -10,29 +10,13 @@ var pikePlace = {
     return Math.floor(Math.random() * (maxCustomer - minCustomer) + minCustomer);
   },
   getHourlyCookieSales: function() {
-    this.hourlyCookieSales=[];
     for (var i = 0; i < hours.length; i++){
-      this.hourlyCookieSales.push(this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale);
+      var cookies = this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale;
+      this.hourlyCookieSales.push(cookies);
+      this.totalCookieSales += cookies;
     }
-  },
-  getSum: function(){
-      this.getHourlyCookieSales();
-      this.totalCookieSales = this.hourlyCookieSales.reduce(function(a, b) {
-        return a + b;
-    });
-    return this.totalCookieSales;
-  },
-  showItems: function(){
-    var ulEl = document.createElement("ul");
-    var keys = Object.keys(this);
-    for (var i = 0; i < 6; i++){
-      var liEl = document.createElement('li');
-      liEl.textContent = this[keys[i]];
-      ulEl.appendChild(liEl);
-    }
-    sectionEl.appendChild(ulEl);
   }
-};
+}
 
 var seaTac = {
   name: "SeaTac Airport",
@@ -45,29 +29,13 @@ var seaTac = {
     return Math.floor(Math.random() * (maxCustomer - minCustomer) + minCustomer);
   },
   getHourlyCookieSales: function(){
-    this.hourlyCookieSales = [];
     for (var i = 0; i < hours.length; i++){
-      this.hourlyCookieSales.push(this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale);
+      var cookies = this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale;
+      this.hourlyCookieSales.push(cookies);
+      this.totalCookieSales += cookies;
     }
-  },
-  getSum: function(){
-    this.getHourlyCookieSales();
-    this.totalCookieSales = this.hourlyCookieSales.reduce(function(a,b){
-      return a + b;
-    });
-    return this.totalCookieSales;
-  },
-  showItems: function(){
-    var ulEl = document.createElement("ul");
-    var keys = Object.keys(this);
-    for (var i = 0; i < 6; i++){
-      var liEl = document.createElement('li');
-      liEl.textContent = this[keys[i]];
-      ulEl.appendChild(liEl);
-    }
-    sectionEl.appendChild(ulEl);
-    }
-  };
+  }
+}
 
 
   var southcenter = {
@@ -81,30 +49,13 @@ var seaTac = {
       return Math.floor(Math.random() * (maxCustomer - minCustomer) + minCustomer);
     },
     getHourlyCookieSales: function(){
-      this.hourlyCookieSales = [];
       for (var i = 0; i < hours.length; i++){
-        this.hourlyCookieSales.push(this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale);
+        var cookies = this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale;
+        this.hourlyCookieSales.push(cookies);
+        this.totalCookieSales += cookies;
       }
-    },
-    getSum: function(){
-      this.getHourlyCookieSales();
-      this.totalCookieSales = this.hourlyCookieSales.reduce(function(a,b){
-        return a + b;
-      });
-      return this.totalCookieSales;
-    },
-    showItems: function(){
-      var ulEl = document.createElement("ul");
-      var keys = Object.keys(this);
-      for (var i = 0; i < 6; i++){
-        var liEl = document.createElement('li');
-        liEl.textContent = this[keys[i]];
-        ulEl.appendChild(liEl);
-      }
-      sectionEl.appendChild(ulEl);
-     },
-    };
-
+    }
+  }
 
     var bellevue = {
       name: "Bellevue Square",
@@ -117,29 +68,13 @@ var seaTac = {
         return Math.floor(Math.random() * (maxCustomer - minCustomer) + minCustomer);
       },
       getHourlyCookieSales: function(){
-        this.hourlyCookieSales = [];
         for (var i = 0; i < hours.length; i++){
-          this.hourlyCookieSales.push(this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale);
+          var cookies = this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale;
+          this.hourlyCookieSales.push(cookies);
+          this.totalCookieSales += cookies;
         }
-      },
-      getSum: function(){
-        this.getHourlyCookieSales();
-        this.totalCookieSales = this.hourlyCookieSales.reduce(function(a,b){
-          return a + b;
-        });
-        return this.totalCookieSales;
-      },
-      showItems: function(){
-        var ulEl = document.createElement("ul");
-        var keys = Object.keys(this);
-        for (var i = 0; i < 6; i++){
-          var liEl = document.createElement('li');
-          liEl.textContent = this[keys[i]];
-          ulEl.appendChild(liEl);
-        }
-        sectionEl.appendChild(ulEl);
-        }
-      };
+      }
+    }
 
       var alki = {
         name: "Alki",
@@ -152,26 +87,10 @@ var seaTac = {
           return Math.floor(Math.random() * (maxCustomer - minCustomer) + minCustomer);
         },
         getHourlyCookieSales: function(){
-          this.hourlyCookieSales = [];
           for (var i = 0; i < hours.length; i++){
-            this.hourlyCookieSales.push(this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale);
+            var cookies = this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale;
+            this.hourlyCookieSales.push(cookies);
+            this.totalCookieSales += cookies;
           }
-        },
-        getSum: function(){
-          this.getHourlyCookieSales();
-          this.totalCookieSales = this.hourlyCookieSales.reduce(function(a,b){
-            return a + b;
-          });
-          return this.totalCookieSales;
-        },
-        showItems: function(){
-          var ulEl = document.createElement("ul");
-          var keys = Object.keys(this);
-          for (var i = 0; i < 6; i++){
-            var liEl = document.createElement('li');
-            liEl.textContent = this[keys[i]];
-            ulEl.appendChild(liEl);
-          }
-          sectionEl.appendChild(ulEl);
-          }
-        };
+        }
+      }
