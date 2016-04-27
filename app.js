@@ -1,4 +1,4 @@
-var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];
+var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ",];
 var pikePlace = {
   name: "Pike Place",
   minCustomer: 17,
@@ -6,33 +6,32 @@ var pikePlace = {
   avgCookieSale: 5.2,
   hourlyCookieSales: [],
   totalCookieSales: 0 ,
-  randNumber: function(min, max) {
+  randNumber: function(max, min) {
     return Math.random() * (max - min) + min;
   },
   getHourlyCookieSales: function(arr, totals, avg, rand, hour) {
     for (var i = 0; i < hour.length; i++){
-      var cookies = Math.floor(this.randNumber(this.minCustomer, this.maxCustomer) * avg);
+      var cookies = Math.floor(this.randNumber(this.maxCustomer, this.minCustomer) * avg);
       arr.push(cookies);
-      totals += cookies;
+      this.totalCookieSales += cookies;
     }
   },
   render: function(){
     this.getHourlyCookieSales(this.hourlyCookieSales, this.totalCookieSales, this.avgCookieSale, this.randNumber, hours);
-    var sectionEl = document.getElementById('pikeList');
-    var ulEl = document.createElement('ul');
-    var liEl = document.createElement('li');
-    sectionEl.textContent = this.name;
-
-    for (var i = 0; i < hours.length; i++){
-      liEl.textContent = hours[i] + this.hourlyCookieSales[i];
-      ulEl.appendChild(liEl);
+    var ulEl = document.createElement("ul");
+    ulEl.appendChild(document.createTextNode(this.name));
+    var sectionEl = document.getElementById('pikeList').appendChild(ulEl);
+      for (var i = 0; i < hours.length; i++){
+        var liEl = document.createElement('li');
+        liEl.textContent = hours[i] + this.hourlyCookieSales[i];
+        ulEl.appendChild(liEl);
+      }
+      var liEl_two =  document.createElement('li');
+      liEl_two.textContent = "Total: " + this.totalCookieSales;
+      ulEl.appendChild(liEl_two);
     }
-    var liList = document.createElement('li');
-    liList.textContent = "grand total is: " + this.totalCookieSales;
-    ulEl.appendChild(liList);
-    sectionEl.appendChild(ulEl);
-  }
 };
+
 
 var seaTac = {
   name: "SeaTac Airport",
@@ -41,8 +40,8 @@ var seaTac = {
   avgCookieSale: 1.2,
   hourlyCookieSales: [],
   totalCookieSales: 0,
-  randNumber: function(maxCustomer, minCustomer){
-    return Math.floor(Math.random() * (maxCustomer - minCustomer) + minCustomer);
+  randNumber: function(max, min){
+    return Math.random() * (max - min) + min;
   },
   getHourlyCookieSales: function(){
     for (var i = 0; i < hours.length; i++){
@@ -110,7 +109,7 @@ var seaTac = {
           }
         }
       }
-    //  pikePlace.render();
+//pikePlace.render();
 var stores = [
   pikePlace,
 ];
