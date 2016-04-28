@@ -2,26 +2,170 @@
 <html>
   <head>
     <title>Style Guild</title>
-    <link rel="stylesheet" type="stylesheet" href="stylesheet.css">
+    <style>
+/*for p and normal text  font-family: 'Sorts Mill Goudy', serif;*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
+/*for h tags font-family: 'Sorts Mill Goudy', serif;
+font-family: 'Sorts Mill Goudy', serif;*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Patua+One);
+    #styleGuildTitle{
+      text-align: center;
+      text-decoration: underline;
+    }
+    body{
+      background-color: #F3F3F3;
+    }
+    h1, h2, h3 {
+      font-family: 'Sorts Mill Goudy', serif;
+      color:#423D3D;
+    }
+    #wrapper{
+      position: relative;
+      clear: both;
+      padding-bottom: 480px;
+    }
+    #colorPalette{
+      padding-left: 35px;
+      padding-right: 200px;
+      width: 25%
+      position: relative;
+      float: left;
+    }
+    ul, li{
+      display: inline;
+      padding-right: 235px;
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 34px;
+      color:#423D3D;
+    }
+    #colorOne{
+      background-color: #FFA0A0;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+    }
+    #colorTwo{
+      background-color: #423D3D;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    #colorThree{
+      background-color: #FFECEC;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    #colorFour{
+      background-color: #7A4D4D;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    #colorFive{
+      background-color: #B5A8A8;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    .mainColors{
+      border-radius: 100px;
+    }
+    .hexCode{
+      padding-left: 50px;
+    }
+    footer{
+      padding-top: 65px;
+      padding-bottom: 15px;
+      text-align: center;
+      font-family: 'Sorts Mill Goudy', serif;
+      color: #423d3d;
+    }
+    main{
+      padding-right: 50px;
+    }
+    nav{
+      padding-bottom: 75px;
+      padding-left: 12px;
+      padding-top: 75px
+    }
+    .fontColor{
+      padding-bottom: 25px;
+      color:#423D3D;
+      font-family: 'Sorts Mill Goudy', serif;
+    }
+    .headerFont{
+      font-family: 'Sorts Mill Goudy', serif;
+      color:#423D3D;
+    }
+    .paraFont{
+      font-family: 'Sorts Mill Goudy', serif;
+      color: #423d3d;
+    }
+    #para{
+      font-family: 'Sorts Mill Goudy', serif;
+      color: #423d3d;
+      padding-top: 25px;
+    }
+    </style>
   </head>
   <body>
-    <section id="colorPalette">
-      <h3 id="colorTitle">Color Palette</h3>
-      <div class="mainColors" id="colorOne">
-      </div>
-      <p>#FFA0A0</p>
-      <div class="mainColors" id="colorTwo">
-      </div>
-      <p>#423D3D</p>
-      <div class="mainColors" id="colorThree">
-      </div>
-      <p>#FFECEC</p>
-      <div class="mainColors" id="colorFour">
-      </div>
-      <p>#7A4D4D</p>
-      <div class="mainColors" id="colorFive">
-      </div>
-      <p>#B5A8A8</p>
+    <h1 id="styleGuildTitle">Pat's Salmon Cookie Stand: Style Guide</h1>
+      <section id="wrapper">
+        <nav>
+          <ul>
+            <li>Color Palette</li>
+            <li>Typography</li>
+          </ul>
+        </nav>
+        <section id="colorPalette">
+          <div class="mainColors" id="colorOne">
+          </div>
+          <p class="hexCode">#FFA0A0</p>
+          <div class="mainColors" id="colorTwo">
+          </div>
+          <p class="hexCode">#423D3D</p>
+          <div class="mainColors" id="colorThree">
+          </div>
+          <p class="hexCode">#FFECEC</p>
+          <div class="mainColors" id="colorFour">
+          </div>
+          <p class="hexCode">#7A4D4D</p>
+          <div class="mainColors" id="colorFive">
+          </div>
+          <p class="hexCode">#B5A8A8</p>
+        </section>
+        <main>
+          <h1>Header 1</h1>
+          <p class="headerFont">font-family: 'Sorts Mill Goudy', serif;</p>
+          <p class="fontColor">color: #423D3D</p>
+
+          <h2>Header 2</h2>
+          <p class="headerFont">font-family: 'Sorts Mill Goudy', serif;</p>
+          <p class="fontColor">color: #423D3D</p>
+
+          <h3>Header 3</h3>
+          <p class="headerFont">font-family: 'Sorts Mill Goudy', serif;</p>
+          <p class="fontColor">color: #423D3D</p>
+          <p id="para">Content</p>
+          <p class="paraFont">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="paraFont">Paragraph font: font-family:'Sorts Mill Goudy', serif;</p>
+          <p class="paraFont">Paragraph font color: #423D3D</p>
+
+          <p class="paraFont">Google Font<p>
+          <p class="paraFont">@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);<p>
+          <p class="paraFont">@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Patua+One);<p>
+      </main>
     </section>
+    <footer>Steve Bachtel 2016</footer>
   </body>
 </html>
