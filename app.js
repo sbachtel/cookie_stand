@@ -1,6 +1,6 @@
-var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ",];
+var hours = ['10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ',];
 var pikePlace = {
-  name: "Pike Place",
+  name: 'Pike Place',
   minCustomer: 17,
   maxCustomer: 88,
   avgCookieSale: 5.2,
@@ -52,7 +52,7 @@ var seaTac = {
   },
   render: function(){
     this.getHourlyCookieSales(this.hourlyCookieSales, this.totalCookieSales, this.avgCookieSale, this.randNumber,hours);
-    var ulEl = document.createElement("ul");
+    var ulEl = document.createElement('ul');
     ulEl.appendChild(document.createTextNode(this.name));
     var sectionEl = document.getElementById('seaTacList').appendChild(ulEl);
     for (var i = 0; i < hours.length; i++){
@@ -167,7 +167,7 @@ var seaTac = {
       };
 //pikePlace.render();
 var stores = [
-  pikePlace, seaTac, bellevue, alki,
+  pikePlace, seaTac, bellevue, alki, southcenter,
 ];
 for (var k = 0; k < stores.length; k++) {
   stores[k].render();
