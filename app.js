@@ -1,13 +1,21 @@
 var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ",];
 
-var pikePlace = new CookieStore('Pike Place', 17, 88, 5.2, [], 0)
+var pikePlace = new CookieStore('Pike Place', 17, 88, 5.2, [], 0);
+var seaTac = new CookieStore('SeaTac Airport', 6, 24, 1.2, [], 0);
+var southcenter = new CookieStore('Southcenter', 11, 38, 1.9, [], 0);
+var bellevue = new CookieStore('Bellevue Square', 20, 48, 3.3, [], 0);
+var alki = new CookieStore('Alki', 3, 24, 2.6, [], 0);
 
-function CookieStore (name, minCustomer, maxCustomer, avgCookieSale, hourlyCookieSales, totalCookieSales){
+function CookieStore (name, minCustomer, maxCustomer, avgCookieSale, hourlyCookieSales, totalCookieSales) {
   this.name = name;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
+  this.avgCookieSale = avgCookieSale;
   this.hourlyCookieSales = hourlyCookieSales;
   this.totalCookieSales = totalCookieSales;
+  // this.sectionEl = function(){
+  //   return CookieStore.prototype;
+  // };
 }
 
 CookieStore.prototype.randNumber = function(max, min){
