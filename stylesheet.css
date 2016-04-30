@@ -1,5 +1,125 @@
-#colorOne{
-  background-color: #FFA0A0;
-  width: 200px;
-  height: 200px;
-}
+/*for p and normal text  font-family: 'Sorts Mill Goudy', serif;*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
+/*for h tags font-family: 'Sorts Mill Goudy', serif;
+font-family: 'Sorts Mill Goudy', serif;*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Patua+One);
+    #styleGuildTitle{
+      text-align: center;
+      text-decoration: underline;
+    }
+    body{
+      background-color: #F3F3F3;
+    }
+    h1, h2, h3 {
+      font-family: 'Sorts Mill Goudy', serif;
+      color:#423D3D;
+    }
+    h1{
+      font-size: 45px;
+    }
+    h2{
+      font-size: 35px;
+    }
+    h3{
+      font-size: 30px;
+    }
+    p{
+      font-size: 22px;
+    }
+    #wrapper{
+      position: relative;
+      clear: both;
+      padding-bottom: 480px;
+    }
+    #colorPalette{
+      padding-left: 35px;
+      padding-right: 200px;
+      width: 25%
+      position: relative;
+      float: left;
+    }
+    ul, li{
+      display: inline;
+      padding-right: 235px;
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 34px;
+      color:#423D3D;
+    }
+    #colorOne{
+      background-color: #FFA0A0;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+    }
+    #colorTwo{
+      background-color: #373535;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    #colorThree{
+      background-color: #F3F3F3;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    #colorFour{
+      background-color: #7A4D4D;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    #colorFive{
+      background-color: #B5A8A8;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      box-shadow: rgba(0,0,0,19.2) 0px 0px 6px, inset rgba(0,0,0,0.2) 0px 0px 0px;
+
+    }
+    .mainColors{
+      border-radius: 100px;
+    }
+    .hexCode{
+      padding-left: 50px;
+    }
+    footer{
+      padding-top: 65px;
+      padding-bottom: 15px;
+      text-align: center;
+      font-family: 'Sorts Mill Goudy', serif;
+      color: #373535;
+    }
+    main{
+      padding-right: 50px;
+    }
+    nav{
+      padding-bottom: 75px;
+      padding-left: 12px;
+      padding-top: 75px
+    }
+    .fontColor{
+      padding-bottom: 5px;
+      color:#373535;
+      font-family: 'Sorts Mill Goudy', serif;
+    }
+    .headerFont{
+      font-family: 'Sorts Mill Goudy', serif;
+      color:#373535;
+    }
+    .paraFont{
+      font-family: 'Sorts Mill Goudy', serif;
+      color: #373535;
+    }
+    #para{
+      font-family: 'Sorts Mill Goudy', serif;
+      color: #373535;
+      padding-top: 25px;
+    }
