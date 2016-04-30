@@ -1,12 +1,12 @@
 var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ",];
 
-var pikePlace = new CookieStore('Pike Place', 17, 88, 5.2);
-var seaTac = new CookieStore('SeaTac Airport', 6, 24, 1.2);
-var southcenter = new CookieStore('Southcenter', 11, 38, 1.9);
-var bellevue = new CookieStore('Bellevue Square', 20, 48, 3.3);
-var alki = new CookieStore('Alki', 3, 24, 2.6);
+var pikePlace = new Store('Pike Place', 17, 88, 5.2);
+var seaTac = new Store('SeaTac Airport', 6, 24, 1.2);
+var southcenter = new Store('Southcenter', 11, 38, 1.9);
+var bellevue = new Store('Bellevue Square', 20, 48, 3.3);
+var alki = new Store('Alki', 3, 24, 2.6);
 
-function CookieStore (name, minCustomer, maxCustomer, avgCookieSale) {
+function Store (name, minCustomer, maxCustomer, avgCookieSale) {
   this.name = name;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
@@ -15,19 +15,19 @@ function CookieStore (name, minCustomer, maxCustomer, avgCookieSale) {
   this.totalCookieSales = 0;
 }
 
-CookieStore.prototype.randNumber = function(max, min){
+Store.prototype.randNumber = function(max, min){
   return Math.random() * (max - min) + min;
 };
 
-CookieStore.prototype.getHourlyCookieSales = function(arr, totals, avg, rand, hour) {
+Store.prototype.getHourlyCookieSales = function(rand, max, min, arr, totals, avg, hour) {
   for (var i = 0; i < hour.length; i++){
-    var cookies = Math.floor(this.randNumber(this.maxCustomer, this.minCustomer) * avg);
+    var cookies = Math.floor(rand(max, min) * avg);
     arr.push(cookies);
-    this.totalCookieSales += cookies;
+    totals += cookies;
   };
 
-CookieStore.prototype.render = function(){
-  this.getHourlyCookieSales(this.hourlyCookieSales, this.totalCookieSales, this.avgCookieSale, this.randNumber, hours);
+Store.prototype.render = function(){
+  this.getHourlyCookieSales(this.randNumber, this.maxCustomer, this.minCustomer, this.hourlyCookieSales, this.totalCookieSales, this.avgCookieSale, hours);
   var ulEl = document.createElement("ul");
   ulEl.appendChild(document.createTextNode(this.name));
   var sectionEl = document.getElementById('myInfoList').appendChild(ulEl);
@@ -42,11 +42,11 @@ CookieStore.prototype.render = function(){
   }
 };
 
-pikePlace.render();
-seaTac.render();
-southcenter.render();
-bellevue.render();
-alki.render();
+Store.pikePlace.render();
+Store.seaTac.render();
+Store.southcenter.render();
+Store.bellevue.render();
+Store.alki.render();
 
 
 
