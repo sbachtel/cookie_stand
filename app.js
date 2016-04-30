@@ -29,17 +29,17 @@ Store.prototype.getHourlyCookieSales = function() {
 
 Store.prototype.render = function(){
   this.getHourlyCookieSales();
-  var ulEl = document.createElement("ul");
-  ulEl.appendChild(document.createTextNode(this.name));
-  var sectionEl = document.getElementById('myInfoList').appendChild(ulEl);
+  var trEl = document.createElement("tr");
+  trEl.appendChild(document.createTextNode(this.name));
+  var tableEl = document.getElementById('myInfoList').appendChild(trEl);
     for (var i = 0; i < hours.length; i++){
-      var liEl = document.createElement('li');
-      liEl.textContent = hours[i] + this.hourlyCookieSales[i];
-      ulEl.appendChild(liEl);
+      var tdEl = document.createElement('td');
+      tdEl.textContent = this.hourlyCookieSales[i];
+      trEl.appendChild(tdEl);
     }
-    var liEl_two =  document.createElement('li');
-    liEl_two.textContent = "Total: " + this.totalCookieSales;
-    ulEl.appendChild(liEl_two);
+  var tdEl_two =  document.createElement('td');
+  tdEl_two.textContent = "Total: " + this.totalCookieSales;
+  trEl.appendChild(tdEl_two);
 
 };
 
