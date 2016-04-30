@@ -1,4 +1,4 @@
-var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: ",];
+var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];
 
 var pikePlace = new Store('Pike Place', 17, 88, 5.2);
 var seaTac = new Store('SeaTac Airport', 6, 24, 1.2);
@@ -19,15 +19,16 @@ Store.prototype.randNumber = function(max, min){
   return Math.random() * (max - min) + min;
 };
 
-Store.prototype.getHourlyCookieSales = function(rand, max, min, arr, totals, avg, hour) {
-  for (var i = 0; i < hour.length; i++){
-    var cookies = Math.floor(rand(max, min) * avg);
-    arr.push(cookies);
-    totals += cookies;
-  };
+Store.prototype.getHourlyCookieSales = function() {
+  for (var i = 0; i < hours.length; i++){
+    var cookies = Math.floor(this.randNumber(this.maxCustomer, this.minCustomer) * this.avgCookieSale);
+    this.hourlyCookieSales.push(cookies);
+    this.totalCookieSales += cookies;
+  }
+};
 
 Store.prototype.render = function(){
-  this.getHourlyCookieSales(this.randNumber, this.maxCustomer, this.minCustomer, this.hourlyCookieSales, this.totalCookieSales, this.avgCookieSale, hours);
+  this.getHourlyCookieSales();
   var ulEl = document.createElement("ul");
   ulEl.appendChild(document.createTextNode(this.name));
   var sectionEl = document.getElementById('myInfoList').appendChild(ulEl);
@@ -39,14 +40,14 @@ Store.prototype.render = function(){
     var liEl_two =  document.createElement('li');
     liEl_two.textContent = "Total: " + this.totalCookieSales;
     ulEl.appendChild(liEl_two);
-  }
+
 };
 
-Store.pikePlace.render();
-Store.seaTac.render();
-Store.southcenter.render();
-Store.bellevue.render();
-Store.alki.render();
+pikePlace.render();
+seaTac.render();
+southcenter.render();
+bellevue.render();
+alki.render();
 
 
 
