@@ -1,4 +1,4 @@
-var hours = ["10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];
+var hours = ["10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm"];
 
 var pikePlace = new Store('Pike Place', 17, 88, 5.2);
 var seaTac = new Store('SeaTac Airport', 6, 24, 1.2);
@@ -30,17 +30,24 @@ Store.prototype.getHourlyCookieSales = function() {
 Store.prototype.render = function(){
   this.getHourlyCookieSales();
   var trEl = document.createElement("tr");
+// var trEl2 = document.createElement("td");
   trEl.appendChild(document.createTextNode(this.name));
   var tableEl = document.getElementById('myInfoList').appendChild(trEl);
-    for (var i = 0; i < hours.length; i++){
+
+  // for (var i = 0; i < hours[6] i++){
+  //     var tdEl2 = document.createElement('td');
+  //     tdEl2.textContent = "Stores" + hours + "Totals";
+  //     trEl.appendChild(tdEl2);
+  //   }
+
+  for (var i = 0; i < hours.length; i++){
       var tdEl = document.createElement('td');
       tdEl.textContent = this.hourlyCookieSales[i];
       trEl.appendChild(tdEl);
     }
-  var tdEl_two =  document.createElement('td');
+  var tdEl_two = document.createElement('td');
   tdEl_two.textContent = "Total: " + this.totalCookieSales;
   trEl.appendChild(tdEl_two);
-
 };
 
 pikePlace.render();
