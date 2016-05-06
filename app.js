@@ -27,37 +27,42 @@ Store.prototype.getHourlyCookieSales = function() {
   }
 };
 
+var tableOne = document.getElementById('myTable');
+var rowTr = document.createElement('tr');
+var emptyCell = document.createElement('th');
+var totalTitle = document.createElement('th');
+
+emptyCell.textContent = 'Stores';
+totalTitle.textContent = 'Total';
+tableOne.appendChild(rowTr);
+rowTr.appendChild(emptyCell);
+
+for (var i = 0; i < hours.length; i++){
+  var thHours = document.createElement('th');
+  thHours.textContent = hours[i];
+  rowTr.appendChild(thHours);
+}
+rowTr.appendChild(totalTitle);
+
 Store.prototype.render = function(){
   this.getHourlyCookieSales();
-  var trEl = document.createElement("tr");
-  trEl.appendChild(document.createTextNode(this.name));
-  var tableEl = document.getElementById('myInfoList').appendChild(trEl);
+  var rowTr2 = document.createElement("tr");
+  var tdStores = document.createElement('td');
+  tdStores.appendChild(document.createTextNode(this.name));
+  rowTr2.appendChild(tdStores);
+  tableOne.appendChild(rowTr2);
 
   for (var i = 0; i < hours.length; i++){
-      var tdEl = document.createElement('td');
-      tdEl.textContent = this.hourlyCookieSales[i];
-      trEl.appendChild(tdEl);
+      var dataTd = document.createElement('td');
+      dataTd.textContent = this.hourlyCookieSales[i];
+      rowTr2.appendChild(dataTd);
     }
 
-  var tdEl_two = document.createElement('td');
-  tdEl_two.textContent = "Total: " + this.totalCookieSales;
-  trEl.appendChild(tdEl_two);
+  var dataTotals = document.createElement('td');
+  dataTotals.textContent = this.totalCookieSales;
+  rowTr2.appendChild(dataTotals);
 
-  var thOne = document.createElement('th');
-  var thTwo = document.createElement('th');
-  var thThree = document.createElement('th');
-
-  thOne.appendChild(document.createTextNode('Stores'));
-  thThree.appendChild(document.createTextNode('Totals'));
-    for(var i = 0; i < hours.length - 1; i++){
-        thTwo.appendChild(document.createTextNode(hours[i]));
-  }
-
-  trEl.appendChild(thOne);
-  trEl.appendChild(thTwo);
-  trEl.appendChild(thThree);
-
-};
+ };
 var formEl = document.getElementById('myForm');
 var inputSN = document.getElementById('storeName');
 var inputMin = document.getElementById('minCust');
@@ -72,12 +77,7 @@ formEl.addEventListener('submit', function(event){
   var tdTwo = document.createElement('td');
   var tdThree = document.createElement('td');
   var tdFour = document.createElement('td');
-
 });
-
-
-
-
 
 pikePlace.render();
 seaTac.render();
