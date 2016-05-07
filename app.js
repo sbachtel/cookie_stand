@@ -1,4 +1,5 @@
-var hours = ["10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm"];
+
+var hours = ['10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm'];
 
 var pikePlace = new Store('Pike Place', 17, 88, 5.2);
 var seaTac = new Store('SeaTac Airport', 6, 24, 1.2);
@@ -49,39 +50,39 @@ rowTr.appendChild(totalTitle);
 
 Store.prototype.render = function(){
   this.getHourlyCookieSales();
-  var rowTr2 = document.createElement("tr");
+  var rowTr2 = document.createElement('tr');
   var tdStores = document.createElement('td');
   tdStores.appendChild(document.createTextNode(this.name));
   rowTr2.appendChild(tdStores);
   tableOne.appendChild(rowTr2);
 
   for (var i = 0; i < hours.length; i++){
-      var dataTd = document.createElement('td');
-      dataTd.textContent = this.hourlyCookieSales[i];
-      rowTr2.appendChild(dataTd);
-    }
+    var dataTd = document.createElement('td');
+    dataTd.textContent = this.hourlyCookieSales[i];
+    rowTr2.appendChild(dataTd);
+  }
 
   var dataTotals = document.createElement('td');
   dataTotals.textContent = this.totalCookieSales;
   rowTr2.appendChild(dataTotals);
 };
 
- Store.renderNew = function(obj){
-   var newTrRow = document.createElement('tr');
-   var newNameTd = document.createElement('td');
-   newNameTd.textContent = obj.name;
-   newTrRow.appendChild(newNameTd);
+Store.renderNew = function(obj){
+  var newTrRow = document.createElement('tr');
+  var newNameTd = document.createElement('td');
+  newNameTd.textContent = obj.name;
+  newTrRow.appendChild(newNameTd);
 
-   for(hour in hours) {
-     var salesTd = document.createElement('td');
-     salesTd.textContent = obj.hourlyCookieSales[hour];
-     newTrRow.appendChild(salesTd);
-   }
-   var newTotalTd =  document.createElement('td');
-   newTotalTd.textContent = obj.totalCookieSales;
-   newTrRow.appendChild(newTotalTd);
-   tableOne.appendChild(newTrRow);
- };
+  for(hour in hours) {
+    var salesTd = document.createElement('td');
+    salesTd.textContent = obj.hourlyCookieSales[hour];
+    newTrRow.appendChild(salesTd);
+  }
+  var newTotalTd =  document.createElement('td');
+  newTotalTd.textContent = obj.totalCookieSales;
+  newTrRow.appendChild(newTotalTd);
+  tableOne.appendChild(newTrRow);
+};
 
 var formEl = document.getElementById('myForm');
 
