@@ -1,0 +1,12 @@
+/*for p and normal text  font-family: 'Sorts Mill Goudy', serif;*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
+
+body{
+  background-color: #F3F3F3;
+}
+ table, td{
+  border: 3px solid #7A4D4D;
+  padding: 5px;
+  color: #423D3D;
+  font-family: 'Sorts Mill Goudy', serif;
+}
