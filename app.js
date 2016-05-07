@@ -5,8 +5,8 @@ var seaTac = new Store('SeaTac Airport', 6, 24, 1.2);
 var southcenter = new Store('Southcenter', 11, 38, 1.9);
 var bellevue = new Store('Bellevue Square', 20, 48, 3.3);
 var alki = new Store('Alki', 3, 24, 2.6);
-var newShop = [];
-var tbl;
+//var shops = [];
+//var tbl;
 
 function Store (name, minCustomer, maxCustomer, avgCookieSale) {
   this.name = name;
@@ -15,6 +15,7 @@ function Store (name, minCustomer, maxCustomer, avgCookieSale) {
   this.avgCookieSale = avgCookieSale;
   this.hourlyCookieSales = [];
   this.totalCookieSales = 0;
+  //this.id = shops.push(this);//not sure about this part
 }
 
 Store.prototype.randNumber = function(max, min){
@@ -63,7 +64,7 @@ Store.prototype.render = function(){
   var dataTotals = document.createElement('td');
   dataTotals.textContent = this.totalCookieSales;
   rowTr2.appendChild(dataTotals);
- };
+};
 
  Store.renderNew = function(obj){
    var newTrRow = document.createElement('tr');
