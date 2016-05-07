@@ -5,6 +5,8 @@ var seaTac = new Store('SeaTac Airport', 6, 24, 1.2);
 var southcenter = new Store('Southcenter', 11, 38, 1.9);
 var bellevue = new Store('Bellevue Square', 20, 48, 3.3);
 var alki = new Store('Alki', 3, 24, 2.6);
+var newShop = [];
+var tbl;
 
 function Store (name, minCustomer, maxCustomer, avgCookieSale) {
   this.name = name;
@@ -61,22 +63,37 @@ Store.prototype.render = function(){
   var dataTotals = document.createElement('td');
   dataTotals.textContent = this.totalCookieSales;
   rowTr2.appendChild(dataTotals);
-
  };
+
+ Store.renderNew = function(obj){
+   var newTrRow = document.createElement('tr');
+   var newNameTd = document.createElement('td');
+   newNameTd.textContent = obj.name;
+   newTrRow.appendChild(newNameTd);
+
+   for(hour in hours) {
+     var salesTd = document.createElement('td');
+     salesTd.textContent = obj.hourlyCookieSales[hour];
+     newTrRow.appendChild(salesTd);
+   }
+   var newTotalTd =  document.createElement('td');
+   newTotalTd.textContent = obj.totalCookieSales;
+   newTrRow.appendChild(newTotalTd);
+   tableOne.appendChild(newTrRow);
+ };
+
 var formEl = document.getElementById('myForm');
-var inputSN = document.getElementById('storeName');
-var inputMin = document.getElementById('minCust');
-var inputMax = document.getElementById('maxCust');
-var inputAvg = document.getElementById('avgSold');
- tableEl = document.getElementById('myTable');
 
 formEl.addEventListener('submit', function(event){
   event.preventDefault();
-  var trEl = document.createElement('tr');
-  var tdOne = document.createElement('td');
-  var tdTwo = document.createElement('td');
-  var tdThree = document.createElement('td');
-  var tdFour = document.createElement('td');
+  var newStoreName = event.target.storeName.value;
+  var newMinCust = parseInt(event.target.minCust.value);
+  var newMaxCust = parseInt(event.target.maxCust.value);
+  var newAvgSold = parseFloat(event.target.avgSold.value);
+  var newShop = new Store(newStoreName, newMinCust, newMaxCust, newAvgSold);
+  newShop.getHourlyCookieSales();
+  Store.renderNew(newShop);
+  formEl.reset();
 });
 
 pikePlace.render();
