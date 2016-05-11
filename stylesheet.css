@@ -117,9 +117,21 @@ font-family: 'Sorts Mill Goudy', serif;*/
     .paraFont{
       font-family: 'Sorts Mill Goudy', serif;
       color: #373535;
+      padding-left: 436px;
     }
     #para{
       font-family: 'Sorts Mill Goudy', serif;
       color: #373535;
       padding-top: 25px;
     }
+    .navItems{
+      color: #423D3D;
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 25px;
+      padding-right: 75px;
+    }
+    a {text-decoration: none;}
+    a:link {color: #423D3D;}
+    a:visited{color: #423D3D;}
+    a:hover{color: #797575;}
+    a:active{color: #423D3D;}
