@@ -142,7 +142,7 @@ aside {
   float: right;
   border-left: 5px solid #7A4D4D;
   margin-top: 60px;
-  padding-left: 30px;
+  padding-left: 34px;
   padding-right: 30px;
 }
 #fishStickers {
@@ -156,4 +156,29 @@ aside {
 }
 #ourStory{
   padding-right: 15px;
+}
+article{
+  width: 450px;
+  float: left;
+  clear: right;
+  margin-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#buyMerch{
+  padding-right: 40px;
+}
+#shirt{
+  width: 250px;
+  border: 5px solid #7A4D4D;
+  margin-top: 30px;
+}
+#shirtDis{
+  float: right;
+  width: 166px;
+  clear:left;
+  margin-top: 30px;
+}
+#fishShirt{
+  margin-top: 10px;
 }
