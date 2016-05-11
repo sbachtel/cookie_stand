@@ -1,0 +1,159 @@
+/*for p and normal text  font-family: 'Sorts Mill Goudy', serif;*/
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
+/*for h tags font-family: 'Sorts Mill Goudy', serif;
+font-family: 'Sorts Mill Goudy', serif;*/
+body * {
+  margin: -9px;
+  padding: 0px;
+}
+body {
+  max-width: 960px;
+  margin: auto;
+}
+nav{
+  padding-bottom: 100px;
+  padding-top: 40px;
+  background-color:  #F3F3F3;
+  background-image: url(images/salmon2.png);
+  background-repeat: repeat-x;
+  background-size: 35px 14px;
+}
+li{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+header{
+  height: 170px;
+  background-image: url(images/148b8c53.png);
+}
+#logoName h1 ul li{
+  color: #423D3D;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 45px;
+}
+a {text-decoration: none;}
+a:link {color: #423D3D;}
+a:visited{color: #423D3D;}
+a:hover{color: #797575;}
+a:active{color: #423D3D;}
+#titleLogo{
+  font-family: 'Sorts Mill Goudy', serif;
+  text-align: center;
+  padding-top: 48px;
+}
+.headerStatement {
+  display: inline;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+#local{
+  float: left;
+  margin-left: 110px;
+  font-size: 30px;
+}
+#baked{
+  float: right;
+  margin-right: 110px;
+  font-size: 30px;
+}
+main{
+  margin-left: 15px;
+  margin-right: 15px;
+  border-bottom: 5px solid #7A4D4D;
+}
+.wrapper{
+  background-image: url(images/img-noise-361x370.png);
+  margin-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wrapper2{
+  background-image: url(images/img-noise-361x370.png);
+  margin-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 200px;
+}
+.navItems {
+  display: inline;
+  padding-left: 75px;
+}
+#creepyFamily{
+  width: 400px;
+  border: 5px solid #7A4D4D;
+  margin-right:19px;
+  float: left;
+}
+.mainContent{
+  font-family: 'Sorts Mill Goudy', serif;
+  margin-top: 5px;
+  line-height: 31px;
+  padding-bottom: 22px;
+}
+footer{
+  font-family: 'Sorts Mill Goudy', serif;
+  padding-top: 200px;
+  text-align: center;
+  clear:both;
+}
+table, td, th {
+  border: 5px solid #7A4D4D;
+  font-size: 22px;
+  padding: 4px;
+}
+#myTable {
+  margin: 0px auto;
+  background-color: hsla(0, 8%, 68%, 0.41);
+}
+#myForm{
+  width: 700px;
+  margin: 0px auto;
+  padding: 25px;
+  border: 5px solid #7A4D4D;
+  margin-top: 140px;
+  margin-bottom: 100px;
+}
+fieldset {
+  border: none;
+}
+input{
+  margin-left: 15px;
+  margin-top: 10px;
+}
+button, input, select, textarea{
+  font-size: 20px;
+  width: 200px;
+}
+#storeName{
+  margin-right: 15px;
+}
+#minCust, #maxCust{
+  margin-right: 15px;
+}
+#submit{
+  width: 87px;
+  margin-top: 24px;
+}
+legend{
+  padding-bottom: 15px;
+}
+aside {
+  width: 400px;
+  float: right;
+  border-left: 5px solid #7A4D4D;
+  margin-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#fishStickers {
+  width: 200px;
+  border: 5px solid #7A4D4D;
+  float: right;
+  clear: left;
+}
+#story{
+  padding-bottom: 20px;
+}
+#ourStory{
+  padding-right: 15px;
+}

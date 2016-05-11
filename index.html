@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Cookie Stand</title>
-      <link rel="stylesheet" href="cookieStyle.css">
+    <title>Pat's Salmon Cookies</title>
+    <link rel="stylesheet" href="cookies.css"
   </head>
   <body>
-    <a href="style.html">Style Guild</a>
-    <table id="myTable"></table>
-    <form id="myForm">
-      <fieldset>
-        <legend>Pat's Cookies</legend>
-        <label for="storeName">Store Name</label>
-        <input type="string" id='storeName'>
-
-        <label for='minCust'>Minimum Customers</label>
-        <input type="number" id="minCust">
-
-        <label for='maxCust'>Maximum Customers</label>
-        <input type="number" id="maxCust">
-
-        <label for="avgSold">Average Cookies Sold</label>
-        <input type="number" id="avgSold">
-      </fieldset>
-      <input type="submit" value="Submit" id="submit">
-    </form>
-    <script src="app.js"></script>
+    <header>
+      <h1 id="titleLogo">Pat's Salmon Cookies</h1>
+      <ul>
+        <li class="headerStatement" id="local">Local Ingredients</li>
+        <li class="headerStatement" id="baked">Baked Daily</li>
+      </ul>
+    </header>
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li class="navItems"><a href="sales.html">Sales</a></li>
+          <li class="navItems"><a href="style.html">Style Guild</a></li>
+        </ul>
+      </nav>
+      <main>
+        <img id="creepyFamily" alt="Creepy Family" src="images/family.jpg">
+        <p class="mainContent">1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="mainContent">2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p class="mainContent">1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </main>
+      <aside>
+        <img id="fishStickers" alt="fishies" src="images/fishies.jpg">
+        <h3 id="story">Our Story</h3>
+        <p id='ourStory'>elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </aside>
+      <footer>
+        <small>Steve Bachtel &copy; 2016</small>
+      </footer>
+    </div><!--end wrapper-->
   </body>
 </html>

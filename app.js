@@ -6,17 +6,21 @@ var seaTac = new Store('SeaTac Airport', 6, 24, 1.2);
 var southcenter = new Store('Southcenter', 11, 38, 1.9);
 var bellevue = new Store('Bellevue Square', 20, 48, 3.3);
 var alki = new Store('Alki', 3, 24, 2.6);
-//var shops = [];
-//var tbl;
+var shops = [];
+var tbl;
 
 function Store (name, minCustomer, maxCustomer, avgCookieSale) {
   this.name = name;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
   this.avgCookieSale = avgCookieSale;
+  //this.id = name.replace(' ','').toLowerCase();
   this.hourlyCookieSales = [];
   this.totalCookieSales = 0;
-  //this.id = shops.push(this);//not sure about this part
+  //shops.push(this);//not sure about this part
+
+  //Store.getHourlyCookieSales(this);
+  //Store.renderStore(tbl,this);
 }
 
 Store.prototype.randNumber = function(max, min){
